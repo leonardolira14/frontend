@@ -1,0 +1,35 @@
+<app-head [Title]="'Lista de Productos'"></app-head>
+<div class="container-fluid bg-white">
+  <div class="row p-t-50">
+
+        <mat-form-field class="col-6" >
+          <mat-label>Buscar</mat-label>
+          <input type="tel" matInput placeholder="Sal de grano">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+
+    <div class="col-4">
+      <app-dropdown [Titulo]="'Productos'"></app-dropdown>
+    </div>
+    <div class="col-2 d-flex justify-content-center">
+
+      <button mat-mini-fab color="warn" aria-label="Example icon button with a home icon">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3" *ngFor="let item of productos">
+     <app-cardproductshome
+
+     [Titulo]="item.Nombre"
+     [Precio]="item.Precio"
+     [MarkUp] = 'item.MarkUp'
+     [Label] = 'item.Label'
+     [Porcentaje]='item.Porcentaje'
+     [Fecha] = 'item.FechaRegistro'
+     ></app-cardproductshome>
+    </div>
+
+  </div>
+</div>

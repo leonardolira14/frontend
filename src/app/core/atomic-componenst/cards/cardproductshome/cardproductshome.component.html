@@ -1,0 +1,25 @@
+<mat-card class="mt-4">
+  <mat-card-title>{{Titulo}}</mat-card-title>
+  <div class="container-fluid ">
+    <div class="row pt-4 pb-4">
+      <div class="col-6 text-center">
+        <span class="d-block">Precio</span>
+        <span class="d-block fs-4 text-muted">{{ Precio | currency }}</span>
+      </div>
+      <div class="col-6 text-center">
+        <span class="d-block">MarkUp</span>
+        <span class="d-block fs-4 text-danger">{{ MarkUp }}</span>
+      </div>
+      <div class="col-12 d-flex justify-content-between align-items-center mt-4">
+        <span class="fs-3 text-bold text-primary">{{Porcentaje}}</span><span>{{Label}}</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <mat-card-actions align="end">
+    <button mat-button><mat-icon>delete</mat-icon></button>
+    <button mat-button><mat-icon>edit</mat-icon></button>
+  </mat-card-actions>
+</mat-card>

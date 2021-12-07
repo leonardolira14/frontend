@@ -1,0 +1,71 @@
+<app-head [Title]="'Crear Alertas'"></app-head>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8">
+      <div class="row">
+        <div class="col-4" *ngFor="let item of alert">
+          <app-cardalert
+          [TitleCard]="item.title"
+          [tipo]="item.tipo"
+          [MarkUp]="item.MarkUp"
+          [FechaEdit]="item.FechaEdit"
+          [fabricacion] ="item.fabricacion"
+          [buttonactiontrash]=true
+          [type]="item.type"
+          [precio]="item.precio"
+          ></app-cardalert>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-4">
+        <div class="row  p-l-30 p-r-30">
+          <div class="col-12 m-t-40 text-center">
+            <h2>Agregar Alerta</h2>
+          </div>
+          <section class="col-12">
+            Alerta Coste
+            <mat-slide-toggle
+
+                class="example-margin"
+                [color]="'primary'"
+                >
+              Alerta Competencia
+            </mat-slide-toggle>
+          </section>
+          <mat-form-field class="col-12" >
+            <mat-label>Tipo Precio</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="col-12" >
+            <mat-label>Tipo Producto</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="col-12" >
+            <mat-label>Tipo Elaboración</mat-label>
+            <mat-select>
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="col-12" >
+            <mat-label>MarkUp inferior a:(%)</mat-label>
+            <input matInput type="number" >
+          </mat-form-field>
+          <div class="col-6  text-center d-flex justify-content-center m-t-40">
+            <button type="button" class="btn btn-primary">Agregar</button>
+          </div>
+          <div class="col-6 text-center d-flex justify-content-center m-t-40">
+            <button type="button" class="btn btn-secondary">Limpiar</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

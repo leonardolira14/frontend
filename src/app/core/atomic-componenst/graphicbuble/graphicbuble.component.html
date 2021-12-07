@@ -1,0 +1,41 @@
+
+
+<div class="container">
+  <div class="row">
+      <div class="col-10" [ngClass]="{'col-10':resumen,'col-12':!resumen}">
+        <span class="title m-b-10">{{Title}}</span>
+
+  <div style="display: block;">
+    <canvas baseChart
+      [datasets]="scatterChartData"
+      [options]="scatterChartOptions"
+      [chartType]="scatterChartType">
+    </canvas>
+</div>
+    </div>
+    <div class="col-2" *ngIf="resumen">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary">Ampliar</button>
+        </div>
+        <div class="col-12 mt-4">
+          <span class="d-block text-center  mt-2">Precio Venta Media</span>
+          <span class="text-bold d-block text-center mt-2">{{ 1100.00 | currency:'USD' }}</span>
+        </div>
+        <div class="col-12 mt-4">
+          <span class="d-block text-center mt-2">Precio Venta Medio Ponderado</span>
+          <span class="text-bold d-block text-center mt-2">{{ 1100.00 | currency:'USD' }}</span>
+        </div>
+        <div class="col-12 mt-4">
+          <span class="d-block text-center mt-2">S2 Varianza</span>
+          <span class="text-bold d-block text-center mt-2">11</span>
+        </div>
+        <div class="col-12 mt-4">
+          <span class="d-block text-center mt-2">S Desviación Estandard</span>
+          <span class="text-bold d-block text-center mt-2">11</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

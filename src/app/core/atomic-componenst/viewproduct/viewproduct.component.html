@@ -1,0 +1,94 @@
+<div class="container general">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 text-center text-bold mt-3">
+      <h1>SAL ROSA DEL HIMALAYA MOLIDO
+        FINO BOLSA 1
+      </h1>
+    </div>
+
+    <div class="col-6">
+      <div class="row">
+        <div class="col-12 mt-3">
+          <span class="d-block text-center  mt-2">Margen</span>
+          <input  type="number" class="form-control markup text-center"  *ngIf="editable" value="11.01">
+          <h4 class="text-bold d-block text-center mt-3 markup" *ngIf="!editable">{{ 1100.00 | currency:'USD' }}</h4>
+        </div>
+        <div class="col-12 mt-3">
+          <span class="d-block text-center mt-2">Precio MSRP</span>
+          <h4 class="text-bold d-block text-center mt-3 precioventa markup">{{ 1100.00 | currency:'USD' }}</h4>
+        </div>
+        <div class="col-12 text-center">
+          <button class="btn btn-primary m-auto">Fijar Nuevo Precio</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <img src="https://www.superama.com.mx/Content/images/products/img_large/0750221955342L.jpg" alt=""
+        class="img-fluid">
+    </div>
+    <div class="col-12 row mt-4">
+      <div class="card bg-gris4N">
+        <div class="card-body p-1 ">
+
+          <div class="row">
+            <div class="col-6 ">
+              <span class="d-block text-center mt-4">Precio MSRP registrado</span>
+              <span class="d-block text-center mt-4">{{ '1122' | currency}} MXN</span>
+            </div>
+            <div class="col-6">
+              <span class="d-block text-center mt-4" >Margen actual con MSRP registrado</span>
+              <span class="d-block text-center mt-4" >10.01 % </span>
+            </div>
+            <div class="col-12">
+              <small class="d-block text-center mt-4 ">11/12/2021  Leonardo Lira Cazares</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 " *ngIf="resumen">
+      <div class="row">
+        <div class="col-12 text-center ">
+          <h4 class="text-bold">Fabricación</h4>
+        </div>
+        <div class="col-4 mt-3">
+          <span class="text-bold">Contenidos</span>
+        </div>
+        <div class="col-4 mt-3">
+          {{11.51| currency:'USD'}}
+        </div>
+        <div class="col-2 mt-3">
+          10,11%
+        </div>
+
+        <div class="col-4 mt-3">
+          <span class="text-bold">Empaque</span>
+        </div>
+        <div class="col-4 mt-3">
+          {{11.51| currency:'USD'}}
+        </div>
+        <div class="col-4 mt-3">
+          10,11%
+        </div>
+
+        <div class="col-4 mt-3">
+          <span class="text-bold">Generales</span>
+        </div>
+        <div class="col-4 mt-3">
+          {{11.51| currency:'USD'}}
+        </div>
+        <div class="col-4 mt-3">
+          10,11%
+        </div>
+
+      </div>
+
+    </div>
+    <div *ngIf="buttonmasdetalle" class="col-12 d-flex justify-content-center mt-4">
+      <button [routerLink]="['/dashboard/detallecosto']"   type="button" class="btn btn-secondary">+ Detalle</button>
+    </div>
+    <div *ngIf="buttoneditar" class="col-12 d-flex justify-content-center mt-4">
+      <button [routerLink]="['/producto/']"   type="button" class="btn btn-secondary">Editar</button>
+    </div>
+  </div>
+</div>

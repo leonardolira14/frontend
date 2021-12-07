@@ -1,0 +1,23 @@
+@import '../../../../styles.scss';
+
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: auto;
+  text-align: center;
+  font-size: 15px;
+}
+.mat-header-cell{
+  text-align: center;
+  font-family: map-get($fonts, bold);
+  font-size: 20px;
+}
+

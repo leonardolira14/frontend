@@ -1,0 +1,44 @@
+<mat-card class="mt-4" >
+  <mat-card-header class="danger">
+
+    <mat-card-title>{{ TitleCard}}</mat-card-title>
+  </mat-card-header>
+  <div class="container-fluid ">
+    <div class="row pt-4 pb-4 ">
+      <div class="col-6 text-right">
+        <span class="d-block fs-5 mt-3">Precio:</span>
+        <span class="d-block fs-5 mt-3">Tipo:</span>
+        <span class="d-block fs-5 mt-3" *ngIf="type === 'coste'" >Fabricación:</span>
+        <span class="d-block fs-5 mt-3"  *ngIf="type === 'coste'">MarkUp:</span>
+        <span class="d-block fs-5 mt-3" *ngIf="type === 'compe'" >Canal:</span>
+        <span class="d-block fs-5 mt-3"  *ngIf="type === 'compe'">Variacion:</span>
+      </div>
+      <div class="col-6 text-center">
+        <span class="d-block  mt-3 fs-5 makeup">{{ precio }}</span>
+        <span class="d-block  mt-3 fs-5 makeup">{{ tipo }}</span>
+        <span class="d-block  mt-3 fs-5 makeup" > {{ fabricacion }}</span>
+        <span class="d-block mt-3 text-bold fs-5   makeup">{{ MarkUp }}</span>
+
+      </div>
+
+
+      <div class="col-12 text-center mt-4">
+        <span class="text-muted d-block">Fecha de registro</span>
+        <span  class="text-primary d-block">{{FechaEdit}}</span>
+      </div>
+      <div class="col-12 text-center mt-4">
+        <span class="text-muted d-block">Ultimpa Modificación</span>
+        <span  class="text-primary d-block">Leonardo Lira Cazares</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <mat-card-actions align="end" >
+    <button *ngIf="buttonactiontrash" mat-button><mat-icon>delete</mat-icon></button>
+    <button *ngIf="buttonactionedit"  mat-button><mat-icon class="icon">edit</mat-icon></button>
+  </mat-card-actions>
+</mat-card>
+
+

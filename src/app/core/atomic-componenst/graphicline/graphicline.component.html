@@ -1,0 +1,27 @@
+<h4 class="d-block text-center">{{title}}</h4>
+
+<div class="chart-wrapper" *ngIf="!gr">
+  <canvas baseChart
+
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+      [plugins]="lineChartPlugins">
+  </canvas>
+</div>
+<div class="chart-wrapperd" *ngIf="gr">
+  <canvas baseChart
+
+      [datasets]="lineChartData2"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+      [plugins]="lineChartPlugins">
+  </canvas>
+</div>
+

@@ -1,6 +1,10 @@
-<div class="container-fluid bg-white p-t-20 p-b-20">
+<div class="container-fluid bg-azulprimary p-t-20 p-b-20">
   <div class="row ">
-    <div class="col-3 text-bold">
+    <div class="col-1 text-bold">
+      <button [routerLink]="['/dashboard/home']"  mat-fab color="primary">  <mat-icon>home</mat-icon></button>
+
+    </div>
+    <div class="col-2 text-bold">
       Determinador de Precios POLYCHEM
     </div>
     <div class="col-6 text-center text-semiBold">
@@ -8,14 +12,14 @@
     </div>
 
     <div class="col-2 d-flex align-middle  justify-content-between">
-      <mat-icon matBadge="15" class="mr-3" matBadgeColor="warn">warning_amber</mat-icon>
+      <mat-icon [routerLink]="['/dashboard/notification']" matBadge="15" class="mr-3" matBadgeColor="warn">warning_amber</mat-icon>
       <strong class="ml-3" [matMenuTriggerFor]="menu">Leonardo Lira Cazares
 
       </strong>
 
 
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>Cambiar Contraseña</button>
+        <button [routerLink]="['/dashboard/user']" mat-menu-item>Mis Datos</button>
         <button mat-menu-item>Cerrar Sesion</button>
       </mat-menu>
     </div>

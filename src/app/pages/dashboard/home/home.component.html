@@ -1,0 +1,122 @@
+<app-head [Title]="'Home'"></app-head>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-5 mt-4">
+      <div class="row">
+        <div class="col-12">
+          <app-graphicbuble [resumen]="false"[Title]="'Volumen vs Margen'"></app-graphicbuble>
+        </div>
+        <div class="col-12 text-bold text-center mt-5">
+        Sus productos son 29% mas caros
+que la competencia en promedio
+        </div>
+        <div class="col-12 mt-3">
+          <app-graphicsbars
+          [lgenda]=false
+          [Label]="grapchBar[0].label"
+          [DataSet]="grapchBar[0].dataset"
+          ></app-graphicsbars>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-5 mt-4">
+      <div class="row">
+
+        <div class="col-12 mt-4">
+          <div class="row">
+            <div class="col-4">
+              <app-graphicline [title]="'Unidadees Vendidadas'"></app-graphicline>
+            </div>
+            <div class="col-4">
+              <app-graphicline [title]="'Nuevos Clientes'"></app-graphicline>
+            </div>
+            <div class="col-4">
+              <app-graphicline [title]="'Unidades / Clientes'"></app-graphicline>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 m-t-110">
+
+          <app-graphicline [gr]="true" [title]="'MarkUps'"></app-graphicline>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 mt-4">
+        <div class="row">
+          <div class="col-12 text-bold">Elaboración</div>
+          <div class="col-12 mt-2">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Distribución</label>
+            </div>
+          </div>
+          <div class="col-12 mt-2">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Maquila</label>
+            </div>
+          </div>
+          <div class="col-12 mt-2">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Fabricación</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-bold">Canal</div>
+          <div class="col-6 mt-2">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Retail</label>
+            </div>
+          </div>
+          <div class="col-6 mt-2">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">HORECA</label>
+            </div>
+          </div>
+
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 text-bold">Producto</div>
+          <div class="col-6 mt-2">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Sales</label>
+            </div>
+          </div>
+          <div class="col-6 mt-2">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Especies</label>
+            </div>
+          </div>
+          <div class="col-6 mt-2">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Agua</label>
+            </div>
+          </div>
+          <div class="col-6 mt-2">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Cerveza</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button [routerLink]="['/dashboard/list']" class="btn btn-secondary">
+              Fichas de Productos
+            </button>
+          </div>
+        </div>
+        <div class="col-12 p-0 mt-5">
+          <app-graphicmultipie [gr]="true" [title]="'Margen'"></app-graphicmultipie>
+      </div>
+
+    </div>
+  </div>
+</div>

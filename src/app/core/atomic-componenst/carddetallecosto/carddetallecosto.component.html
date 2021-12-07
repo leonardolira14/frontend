@@ -1,0 +1,28 @@
+<mat-card class="mt-4">
+  <mat-card-title class="text-center">{{title}}</mat-card-title>
+  <div class="container-fluid ">
+    <div class="row pt-4 pb-4 ">
+      <div class="col-12" *ngFor="let item of arrayLis">
+        <div class="row">
+          <div class="col-6 fs-5 mt-3 text-end">{{item.label}}:</div>
+          <div class="col-6   mt-3 text-bold fs-5 makeup text-left">{{item.text}}</div>
+        </div>
+      </div>
+
+
+
+      <div class="col-12 text-center mt-4">
+        <span class="text-muted d-block">Fecha</span>
+        <span  class="text-primary d-block">{{FechaEdit}}</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <mat-card-actions align="end" >
+    <button *ngIf="buttonactiontrash" mat-button><mat-icon>delete</mat-icon></button>
+    <button *ngIf="buttonactionedit"  mat-button><mat-icon class="icon">edit</mat-icon></button>
+  </mat-card-actions>
+</mat-card>
+

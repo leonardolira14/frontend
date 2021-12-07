@@ -11,7 +11,13 @@ export class CardproductshomeComponent implements OnInit {
 @Input() MarkUp:string = '';
 @Input() Label:string = '';
 @Input() Porcentaje:string = '';
-@Input() Fecha: string ='';
+@Input() FechaEdit: string ='';
+@Input() classhead:string ='';
+@Input() classmakeup:string= '';
+@Input() buttonactiontrash:boolean=false;
+@Input() buttonactionedit:boolean = false;
+@Input() NameEditUser:string ='';
+@Input() subtitle:string='';
   constructor() { }
 
   ngOnInit(): void {

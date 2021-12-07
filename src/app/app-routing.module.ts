@@ -5,6 +5,13 @@ import { SelectivePreloandingStrategyService } from './services/selective-preloa
 
 const routes: Routes = [
   {
+    path: 'producto',
+    loadChildren: () => import('./pages/dashboard/components/products/products.module').then(m => m.ProductsModule),
+    data: {
+      preload: false
+    }
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule),
     data: {

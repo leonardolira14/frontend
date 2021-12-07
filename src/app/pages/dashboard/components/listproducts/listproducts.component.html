@@ -13,7 +13,13 @@
     </div>
     <div class="col-2 d-flex justify-content-center">
 
-      <button mat-mini-fab color="warn" aria-label="Example icon button with a home icon">
+      <button
+      mat-fab
+      class="plus"
+      color="warn"
+      matTooltip="Agregar Producto"
+      [matTooltipPosition]="'below'"
+      >
         <mat-icon>add</mat-icon>
       </button>
     </div>
@@ -21,13 +27,16 @@
   <div class="row">
     <div class="col-3" *ngFor="let item of productos">
      <app-cardproductshome
-
+     [routerLink]="['/dashboard/producto/']"
      [Titulo]="item.Nombre"
      [Precio]="item.Precio"
      [MarkUp] = 'item.MarkUp'
      [Label] = 'item.Label'
      [Porcentaje]='item.Porcentaje'
-     [Fecha] = 'item.FechaRegistro'
+     [FechaEdit] = 'item.FechaRegistro'
+     [classhead] = item.classHead
+     [classmakeup] = item.classMarkUp
+     [NameEditUser]="item.NobreEditor"
      ></app-cardproductshome>
     </div>
 

@@ -1,0 +1,42 @@
+<app-head [Title]="'Detalle del costo'"></app-head>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8">
+      <mat-form-field class=" mb-4 mt-5 w-50">
+        <mat-label>Tipo coste</mat-label>
+        <mat-select>
+          <mat-option value="one">Total</mat-option>
+          <mat-option value="two">Contenido</mat-option>
+          <mat-option value="two">Empaque</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <app-graphicsbars #grafics
+      [Title]="'Composición coste General'"
+
+      ></app-graphicsbars>
+    </div>
+    <div class="col-4 mt-2 ">
+     <div class="row">
+      <div class="col-12 text-center">
+        <app-buttonsgropu></app-buttonsgropu>
+      </div>
+     </div>
+      <app-viewproduct [editable]="false" [buttoneditar]="true"></app-viewproduct>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-3" *ngFor="let item of array">
+          <app-carddetallecosto
+          (click)="cardClin()"
+          [title]="item.Title"
+          [arrayLis] ='item.constent'
+          [FechaEdit]="item.FechaEdicion"
+
+          ></app-carddetallecosto>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

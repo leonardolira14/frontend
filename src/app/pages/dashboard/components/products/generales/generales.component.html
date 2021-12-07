@@ -1,0 +1,25 @@
+
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-8">
+      <div class="col-12">
+        <h2>Generales</h2>
+      </div>
+      <div class="col-12">
+        <app-graphiccake></app-graphiccake>
+        <div class="row mt-5">
+          <div class="col-6 d-flex justify-content-start">
+            <button matStepperPrevious class="btn btn-secondary mt-2">Anterior</button>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <button matStepperNext class="btn btn-secondary mt-2">Siguiente</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <app-buttonsgropu></app-buttonsgropu>
+      <app-viewproduct [editable]="true" ></app-viewproduct>
+    </div>
+  </div>
+</div>

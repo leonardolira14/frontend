@@ -1,0 +1,47 @@
+<app-head [Title]="'Inicio'"></app-head>
+<div class="container-fluid">
+  <div class="row mt-4">
+    <div class="col-8">
+      <div class="row">
+        <div class="col-12 canal">
+          <strong class="m-r-30">Canal: </strong>
+          <mat-checkbox class="m-r-30">Retail</mat-checkbox>
+          <mat-checkbox class="m-r-30">Horeca</mat-checkbox>
+        </div>
+        <div class="col-6 mt-4">
+          <span class="m-r-30">P. Venta Cliente</span>
+          <mat-slide-toggle color="primary">P. Venta Público</mat-slide-toggle>
+        </div>
+
+        <div class="col-6 mt-4">
+          <span class="m-r-30">P. Venta Cliente</span>
+          <mat-slide-toggle color="primary">Margen</mat-slide-toggle>
+        </div>
+        <div class="col-12 mt-5 text-right">
+
+          <app-graphicbuble></app-graphicbuble>
+
+        </div>
+        <div class="col-12 m-t-40">
+          <app-dropdownsimple (selectparams)="selectcliente($event)" [title]="'Comparativa Competencia'"
+            [list]="lis_clientes"></app-dropdownsimple>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="col-4">
+      <div class="row">
+        <div class="col-12">
+          <app-buttonsgropu></app-buttonsgropu>
+        </div>
+        <div class="col-12 m-t-40">
+          <app-viewproduct [buttonmasdetalle]="true"></app-viewproduct>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mt-4">
+      <app-table></app-table>
+    </div>
+  </div>
+</div>

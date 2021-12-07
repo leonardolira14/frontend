@@ -1,0 +1,23 @@
+<app-head [Title]="'Producto'"></app-head>
+<mat-horizontal-stepper [linear]="false" #stepper>
+  <mat-step >
+    <ng-template matStepLabel>Descripción</ng-template>
+    <app-descripcion></app-descripcion>
+  </mat-step>
+  <mat-step  >
+    <ng-template matStepLabel>Contenido</ng-template>
+    <app-content></app-content>
+  </mat-step>
+  <mat-step >
+    <ng-template matStepLabel>Empaque</ng-template>
+    <app-empaque></app-empaque>
+  </mat-step>
+  <mat-step >
+    <ng-template matStepLabel>Generales</ng-template>
+   <app-generales></app-generales>
+  </mat-step>
+  <mat-step >
+    <ng-template matStepLabel>Revisar</ng-template>
+   <app-revisar></app-revisar>
+  </mat-step>
+</mat-horizontal-stepper>

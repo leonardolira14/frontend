@@ -1,0 +1,10 @@
+@import '../../../../styles.scss';
+
+.title{
+  font-size: 25px;
+  font-family: map-get($fonts, bold);
+  color:map-get($gamagrises, gris6);
+  display: block;
+  width: 100%;
+  text-align: center;
+}

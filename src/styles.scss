@@ -59,15 +59,15 @@ $colors: (
   menu:#FEB238,
   blanco:#fff,
   azulcielo2:#E7F0FD,
-  azulprimary:#00204a,
-  primary:#3582DE,
+  azulprimary:#3582De,
+  primary:#3582De,
   azulcielo:#1476FC,
   azulcielo3:#1476FC26,
   azuladmyo:    #005d8f,
   succes: #00a65a,
-  orange:#f7ac43,
+  orange:#F7941D,
   naranja:  #fdb44b,
-  danger:#F2143F,
+  danger:#BF1E2E,
   danger1:     #f53d3d,
   dark:       #222,
   gary-lte:  #d2d6de,
@@ -79,7 +79,7 @@ $colors: (
   teal: #39CCCC,
   olive: #3D9970,
   lime: #01FF70,
-  secondary: #FF851B,
+  secondary: #F7941D,
   fuchsia: #F012BE,
   purple: #605ca8,
   maroon: #D81B60,
@@ -280,7 +280,7 @@ $frontend-theme: mat-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: map-get($colors, azuladmyo );}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 
@@ -348,4 +348,46 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 
 .mat-icon-button.mat-warn {
   color:map-get($colors, secondary );
+}
+
+.mat-fab.mat-warn {
+ &.plus{
+   & .material-icons{
+    height:48px !important;
+    width:48px !important;
+    font-size:48px !important;
+    line-height: 25px;
+   }
+ }
+
+}
+
+.mat-form-field {
+  font-size: 22px;
+  & label {
+    font-size: 22px;
+  }
+}
+.form-group{
+  & label{
+    margin-bottom: 10px;
+    color: rgba(map-get($colors , light-gray) ,0.7);
+  }
+  & label, & input,& select,& textarea{
+     font-size: 15px;
+     font-family: map-get($fonts,  semiBold);
+  }
+  & input,& select,& textarea{
+    color: rgba(map-get($colors , blackk) ,0.7);
+  }
+  & .input-group{
+      & .input-group-prepend{
+        background: #fff;
+      }
+      & .input-group-text{
+        background: #fff;
+        border-color: transparent;
+        font-size: 18px;
+      }
+  }
 }

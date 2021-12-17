@@ -14,6 +14,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BaseURLInterceptor } from '../../services/base-url.interceptor';
+import { HttpErrorInterceptor } from '../../services/http-error.interceptor';
 
 @NgModule({
   declarations: [LoginComponent, ForgotpasswordComponent, ResetpasswordComponent],
@@ -25,6 +28,13 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     LoginRoutingModule,
     MatCardModule,
     MatSlideToggleModule
-  ]
+  ],
+  providers: [
+
+    { provide: HTTP_INTERCEPTORS, useClass: BaseURLInterceptor, multi: true },
+    {
+      provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true
+    }
+  ],
 })
 export class LoginModule { }

@@ -22,7 +22,7 @@
           <a [routerLink]="['/home/forgotpassword']">¡Has olvidado tu contraseña?</a>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-5 text-center">
-          <button [routerLink]="['/dashboard/home']" mat-raised-button color="success">Iniciar Sesion</button>
+          <button (click)="nglogin()"  mat-raised-button color="success">Iniciar Sesion</button>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-5 text-center">
           <button mat-raised-button color="warn">Cancelar</button>
